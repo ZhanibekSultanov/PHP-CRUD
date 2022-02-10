@@ -1,9 +1,12 @@
 <?php 
 
-$pdo = new PDO("mysql:host=localhost; dbname=test","root","");
-$statement = $pdo->prepare("SELECT * FROM tasks");
-$statement->execute();
-$tasks = $statement->fetchAll(PDO::FETCH_ASSOC);
+require 'database/queryBuilder.php';
+
+$db = new queryBuilder;
+
+
+
+$tasks = $db->getAllTasks();
 
 ?>
 <!DOCTYPE html>
