@@ -4,9 +4,8 @@ require 'database/queryBuilder.php';
 
 $db = new queryBuilder;
 
+$tasks = $db->all("tasks");
 
-
-$tasks = $db->getAllTasks();
 
 ?>
 <!DOCTYPE html>
